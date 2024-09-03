@@ -19,7 +19,7 @@ spec:
       - name: colored-flask
         image: forvaidya/colored-flask:latest
         ports:
-        - containerPort: 6000
+        - containerPort: 8080
           name: flask-port
         resources:
           requests:
