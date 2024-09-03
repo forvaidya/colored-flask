@@ -6,7 +6,7 @@ metadata:
   labels:
     app: colored-flask
 spec:
-  replicas: 2
+  replicas: 4
   selector:
     matchLabels:
       app: colored-flask
@@ -28,6 +28,11 @@ spec:
           limits:
             cpu: 200m
             memory: 200Mi
+        env:
+          - name: MY_POD_NAME
+            valueFrom:
+              fieldRef:
+                fieldPath: metadata.name
 
 
     

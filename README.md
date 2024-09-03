@@ -4,7 +4,8 @@
 
  Test command 
 
- docker run --rm -d --name mahesh-colored-flask -p 8080:8080 --net=host colored-flask
+ docker run --rm -d --name mahesh-colored-flask -p 8080:8080 --net=host forvaidya/colored-flask
  (port 5000 is used somewhere on my mac) 
 
  kubectl delete service/colored-flask ; kubectl delete deployment/colored-flask
+ docker system prune --all
