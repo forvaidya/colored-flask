@@ -19,7 +19,8 @@ spec:
       - name: colored-flask
         image: forvaidya/colored-flask:latest
         ports:
-        - containerPort: 5000
+        - containerPort: 6000
+          name: flask-port
         resources:
           requests:
             cpu: 100m
