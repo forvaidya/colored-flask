@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: colored-flask
+spec:
+  selector:
+    app: colored-flask
+  ports:
+    - protocol: TCP
+      port: 8080
+      targetPort: 5000
+  type: LoadBalancer
+

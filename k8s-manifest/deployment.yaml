@@ -1,0 +1,32 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: colored-flask
+  labels:
+    app: colored-flask
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: colored-flask
+  template:
+    metadata:
+      labels:
+        app: colored-flask
+    spec:
+      containers:
+      - name: colored-flask
+        image: forvaidya/colored-flask:latest
+        ports:
+        - containerPort: 5000
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+          limits:
+            cpu: 200m
+            memory: 200Mi
+
+
+    
